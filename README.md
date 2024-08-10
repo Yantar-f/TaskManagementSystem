@@ -3,8 +3,19 @@
 ## Instruction
 
 ### Starting app
-execute console command "docker-compose up" in general dir or execute docker-compose up with compose file path
+execute console command
+``
+docker-compose up
+``
+in general dir or execute
 
 ### API docs
-API documentation located at path "api-docs" and "api-docs/ui" (swagger ui) 
+- Doc file 
+``
+http://localhost:8080/api-docs
+``
+- Doc UI
+``
+http://localhost:8080/api-docs/ui
+`` 
 
