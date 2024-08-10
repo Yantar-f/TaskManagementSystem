@@ -7,7 +7,7 @@ execute console command
 ``
 docker-compose up
 ``
-in general dir or execute
+in general dir
 
 ### API docs
 - Doc file 
