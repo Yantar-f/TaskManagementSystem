@@ -1,0 +1,39 @@
+spring:
+    application:
+        name: TASK_MANAGEMENT_SYSTEM
+    main:
+        banner-mode: off
+    output:
+        ansi:
+            enabled: always
+    datasource:
+        url: jdbc:postgresql://task-management-db:5432/TaskManagementDB
+        username: postgres
+        password: 123
+    jpa:
+        open-in-view: false
+        hibernate:
+            ddl-auto: create
+springdoc:
+    swagger-ui:
+        path: ${springdoc.api-docs.path}/ui
+    api-docs:
+        path: /api-docs
+server:
+    port: 8080
+    error:
+        include-message: always
+        include-binding-errors: always
+        include-stacktrace: never
+task-management-system:
+    app:
+        security:
+            access-token:
+                issuer: demo-iss
+                activation-ms: 0
+                expiration-ms: 360000
+                allowed-clock-skew-s: 5
+                cookie-name: demo-a-t
+                cookie-path: /
+                cookie-expiration-s: 365
+                secret-key: 301RJdFDpzEchd3y+4O7GUl3Ade2PNyyDtUx76AdPWpe0uYUW47MON9jtEUOmod9

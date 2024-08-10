@@ -1,0 +1,21 @@
+version: '3.0'
+
+services:
+    task-management-db:
+        container_name: banking-system-database-container
+        image: postgres:15-alpine
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_DB: TaskManagementDB
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 123
+    task-management-system:
+        container_name: task-management-system-container
+        build: .
+        ports:
+            - "8080:8080"
+        depends_on:
+            task-management-db:
+                condition: service_started
+        restart: always
